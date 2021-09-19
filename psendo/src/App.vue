@@ -1,21 +1,25 @@
 <template>
-  <v-app id="inspire">
+  <v-app>
     <v-navigation-drawer
-      v-model="drawer"
       app
       class="pt-4"
-      color="grey lighten-3"
-      mini-variant
+      color="var(--amarelo)"
+      permanent
+      expand-on-hover
     >
-      <v-btn elevation="2" style="border-radius: 50%">
-        CLICK
-      </v-btn>
+      <v-list>
+        <v-list-item link>
+          <v-list-item-icon>
+            <v-icon color="var(--azul)">mdi-home</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Inicio</v-list-item-title>
+        </v-list-item>
+      </v-list>
     </v-navigation-drawer>
 
     <v-main>
       <router-view to="/">Home</router-view>
-
-      <!-- Habilitar codigo abaixo quando for implementado router
+      <!-- Habilitar codigo abaixo quando rotas forem implementadas
       <router-view to="/about">About</router-view> -->
     </v-main>
   </v-app>
@@ -26,3 +30,8 @@ export default {
   //
 };
 </script>
+
+<style scoped>
+@import 'assets/variables.css';
+
+</style>
