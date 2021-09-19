@@ -1,6 +1,7 @@
 # psendo
 
 ## Project setup
+Projeto feito em vue.js + css 
 ```
 npm install
 ```
