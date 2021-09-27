@@ -23,3 +23,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Material Style
+Vuetify é a biblioteca utilizada para realizar o import de componentes.
+
+## Todo
+[] Refactor classes setadas em CSS para classes do guia de estilo do vuetify
