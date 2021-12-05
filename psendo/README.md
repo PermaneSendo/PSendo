@@ -1,4 +1,4 @@
-# psendo
+# PermaneSendo
 
 ## Project setup
 Projeto feito em vue.js + css 

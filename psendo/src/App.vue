@@ -1,31 +1,75 @@
 <template>
   <v-app>
-    <!-- <v-navigation-drawer
-      app
-      class="pt-4"
-      color="var(--amarelo)"
-      permanent
-      expand-on-hover
-    >
-      <v-list>
-        <v-list-item link class="bg-color-creme">
-          <v-list-item-icon>
-            <v-icon
-              color="var(--azul)"
-              class="bg-color-creme"
-              >mdi-home
-            </v-icon>
-          </v-list-item-icon>
-          <v-list-item-title class="bg-color-creme">Inicio</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
+    <header class="navbar">
+      <router-link to="/" class="router-link">HOME PAGE</router-link>
+      <router-link to="/manual-calouro" class="router-link">MANUAL DO CALOURO</router-link>
+      <router-link to="/sobre" class="router-link">CONTATO</router-link>
+    </header>
 
-    <v-main>
+    <v-main class="main-content">
       <router-view to="/">Home</router-view>
-      <!-- Habilitar codigo abaixo quando rotas forem implementadas
-      <router-view to="/about">About</router-view> -->
     </v-main>
+
+    <v-footer
+      padless
+      class="bg-c-yellow"
+    >
+      <v-card
+        flat
+        tile
+        class="bg-c-yellow text-center"
+        style="width: 100%;"
+      >
+        <div class="d-flex justify-center my-3">
+          <div>
+            <v-btn
+              @click="goToPage(facebook)"
+              class="mx-4"
+              icon
+            >
+              <v-icon size="24px" color="black">
+                mdi-facebook
+              </v-icon>
+            </v-btn>
+          </div>
+
+          <div>
+            <v-btn
+              @click="goToPage(instagram)"
+              class="mx-4"
+              icon
+            >
+              <v-icon size="24px"  color="black"> mdi-instagram </v-icon>
+            </v-btn>
+          </div>
+
+          <div>
+            <v-btn
+              class="mx-4"
+              icon
+            >
+              <v-img
+              size="24px"
+              max-height="32px"
+              max-width="48px"
+              alt="a palavra permanesendo ao redor de pessoas unidas"
+              src="@/assets/marca_UFPR.png">
+              </v-img>
+            </v-btn>
+          </div>
+        </div>
+        <div class="black--text">
+          <p>PermaneSendo</p>
+          <p>De aluno para aluno</p>
+        </div>
+
+        <v-divider></v-divider>
+
+        <v-card-text class="black--text">
+          2014 - {{ new Date().getFullYear() }}
+        </v-card-text>
+      </v-card>
+    </v-footer>
 
   </v-app>
 </template>
@@ -38,12 +82,30 @@ export default {
 
 <style scoped>
 @import 'assets/variables.css';
-  * {
+  .main-content {
     background-color: var(--creme);
   }
 
-  .bg-color-creme {
-    background-color: #FBD266;
+  .bg-c-yellow {
+    background-color: var(--amarelo) !important;
+  }
+
+  .navbar {
+    background-color: var(--amarelo);
+    display: flex;
+    justify-content: center;
+  }
+  .navbar .router-link {
+    background-color: var(--creme);
+    padding: 5px 10px;
+    margin: 10px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--preto);
+  }
+  .navbar .router-link:hover {
+    background-color: rgb(0,0,0,0.05);
+    transition-duration: 0.3s;
   }
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Como você veio parar aqui?</h1>
+    <h1 style="background-color: red;">About</h1>
   </div>
 </template>
 
