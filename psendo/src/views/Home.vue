@@ -39,21 +39,6 @@
 <script>
 export default {
   name: 'Home',
-  data() {
-    return {
-      instagram: 'https://www.instagram.com/permanesendo/',
-      facebook: 'https://www.facebook.com/PermaneSENDO/',
-    };
-  },
-  methods: {
-    goToPage(iconClick) {
-      window.open(iconClick, '_blank').focus();
-    },
-
-    sendToManual() {
-
-    },
-  },
 };
 </script>
 

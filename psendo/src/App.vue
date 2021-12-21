@@ -45,6 +45,7 @@
 
           <div>
             <v-btn
+              style="cursor:default"
               class="mx-4"
               icon
             >
@@ -76,7 +77,17 @@
 
 <script>
 export default {
-  //
+  data() {
+    return {
+      instagram: 'https://www.instagram.com/permanesendo/',
+      facebook: 'https://www.facebook.com/PermaneSENDO/',
+    };
+  },
+  methods: {
+    goToPage(iconClick) {
+      window.open(iconClick, '_blank').focus();
+    },
+  },
 };
 </script>
 
