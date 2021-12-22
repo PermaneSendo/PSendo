@@ -3,6 +3,7 @@
   <div class="box-menus menus-link">
     <router-link to="/manual-calouro/restaurantes" class="menus-link">RESTAURANTES</router-link>
     <router-link to="/manual-calouro/campus" class="menus-link">CAMPUS</router-link>
+    <router-link to="/manual-calouro/servicos" class="menus-link">SERVIÇOS DE SAÚDE</router-link>
     <router-view></router-view>
   </div>
 

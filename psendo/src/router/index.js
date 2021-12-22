@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import ManualCalouro from '../views/ManualCalouro.vue';
 import Restaurantes from '../views/ManualCalouroViews/Restaurantes.vue';
+import ServicosSaude from '../views/ManualCalouroViews/ServicosSaude.vue';
 import Campus from '../views/ManualCalouroViews/Campus.vue';
 import SantosAndrade from '../views/ManualCalouroViews/Campus/SantosAndrade.vue';
 import Juveve from '../views/ManualCalouroViews/Campus/Juveve.vue';
@@ -74,6 +75,10 @@ const routes = [
         component: CentroPolitecnico,
       },
     ],
+  },
+  {
+    path: '/manual-calouro/servicos',
+    component: ServicosSaude,
   },
 ];
 
